@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "TZ_replace_describe_GO2",
+  "version": "1.0",
+  "description": "back_goods_add",
+  "icons": {
+    "48": "images/tiangou.png"
+  },
+  "icons": {
+    "16": "images/tiangou.png",
+    "48": "images/tiangou.png",
+    "128": "images/tiangou.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/tiangou.png",
+      "38": "images/tiangou.png"
+    },
+    "default_title": "back_goods_add",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/status.js"
+    ]
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "notifications",
+    "storage",
+    "http://*/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.0576tg.cn/goods/goods_add/id/*"
+      ],
+      "js": [
+        "js/jquery-1.11.3.js",
+        "js/jquery-1.11.3.min.js",
+        "js/back.js"
+      ]
+    }
+  ]
+}
